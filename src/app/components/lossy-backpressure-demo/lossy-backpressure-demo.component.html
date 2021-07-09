@@ -1,0 +1,5 @@
+<label for="input">Start typing:</label>
+<input #input (input)="search$.next(input.value)">
+<p #resultText>
+	{{ searchResult }}
+</p>

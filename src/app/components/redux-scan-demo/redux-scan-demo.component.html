@@ -1,0 +1,9 @@
+<form [formGroup]="productForm">
+	<button (click)="undoClick$.next()">Undo</button>
+	<br />
+	<label for="name">Name</label>
+	<input #name type="text" formControlName="name">
+	<br />
+	<label for="price">Price</label>
+	<input #price type="number" formControlName="price">
+</form>

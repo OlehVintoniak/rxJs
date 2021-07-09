@@ -1,0 +1,10 @@
+<div *ngIf="model$ | async as model">
+	<button (click)="refreshButtonClickSubject.next()" [disabled]="model.isLoading">Refresh data</button>
+	<div>
+		<p *ngIf="model.isLoading">Loading...</p>
+		<p *ngFor="let p of model.products">
+			{{p.name}}
+		</p>
+	</div>
+</div>
+

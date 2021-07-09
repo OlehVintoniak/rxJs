@@ -1,0 +1,10 @@
+<div *ngIf="products$ | async as products else loading">
+	<p *ngFor="let p of products">
+		{{p.name}}
+	</p>
+</div>
+
+
+<ng-template #loading>
+	Loading...
+</ng-template>
